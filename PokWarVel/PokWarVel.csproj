@@ -323,12 +323,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\APIConsume-master\MarvelApi\MarvelApi.csproj">
-      <Project>{2b1f6491-8755-483c-ac13-f57f1f8343b7}</Project>
-      <Name>MarvelApi</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
