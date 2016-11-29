@@ -111,10 +111,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EvalPerso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +225,7 @@
     <Content Include="images\lightbox\next.png" />
     <Content Include="images\lightbox\prev.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\oiseau3.png" />
     <Content Include="images\portfolio-details\1.jpg" />
     <Content Include="images\portfolio\1.jpg" />
     <Content Include="images\portfolio\10.jpg" />
@@ -310,11 +314,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Fiche.cshtml" />
-    <Content Include="Views\Home\FichePerso.cshtml" />
+    <Content Include="Views\Hero\FichePerso.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Search\Results.cshtml" />
+    <Content Include="Views\Hero\Merci.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

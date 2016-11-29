@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MarvelApi.Model.Characters>
+
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Results</h2>
+<p>Voici les résultats de votre recherche sur "@ViewBag.Message"</p>
+<div>
+    @foreach (var item in Model)
+    {
+        Html.RenderPartial("~/Views/Shared/_Fiche.cshtml", item);
+    }
+
+</div>
+<div>Page</div>
+

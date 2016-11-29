@@ -11,6 +11,9 @@
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
   @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
+  .search{
+      border: 3px solid red;
+  }
 
   .single-service.cardContainer{
       display: flex;
@@ -18,10 +21,15 @@
       border: solid 2px darkgoldenrod;
       border-radius: 10px;
       margin: 5px;
-      height: 300px;
-      /*background-color: antiquewhite;*/
-      background-image: url("/images/beigewall_texture.jpg")
-      overflow: scroll;
+      height: 450px;
+      max-width: 300px;
+      background-color: antiquewhite;
+  }
+
+  .single-service.cardContainer p{
+        
+            overflow-y: auto;
+            min-width: 200px;
   }
 
   .cardContainer img.cardPic{
@@ -227,7 +235,7 @@
   position: relative;
   top: 30px;
   right: 15px;
-  display: none;
+  /*display: none;*/
   height: 50px;
 }
 
