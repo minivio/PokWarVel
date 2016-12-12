@@ -1,4 +1,5 @@
-﻿using MarvelApi.Model;
+﻿using MarvelApi;
+using MarvelApi.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,7 +8,7 @@ using System.Web;
 
 namespace PokWarVel.Models
 {
-    public class EvalPerso
+    public class EvalModel
     {
         #region Fields
         private int _idEval;
@@ -85,12 +86,12 @@ namespace PokWarVel.Models
 
         public List<string> ListeCommentaires
         {
-            get { return this.getAllComments(); }
+            get { return this.getAllCommentsWithID(); }
         }
 
         #endregion
 
-        public EvalPerso()
+        public EvalModel()
         {
             this.TypeHero = null;
         }
@@ -136,7 +137,7 @@ namespace PokWarVel.Models
             return true;
         }
 
-        public List<string> getAllComments()
+        public List<string> getAllCommentsWithID()
         {
             List<string> listeCommentaires = new List<string>();
             SqlConnection oConn = new SqlConnection(@"Data Source=26R2-14\WADSQL;Initial Catalog=PokWarVelDB;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
@@ -162,6 +163,8 @@ namespace PokWarVel.Models
             }
             return listeCommentaires;
         }
+
+        
 
     }
 }

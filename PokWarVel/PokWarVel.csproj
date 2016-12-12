@@ -111,13 +111,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\zoneMembre\Controllers\HomeController.cs" />
+    <Compile Include="Areas\zoneMembre\zoneMembreAreaRegistration.cs" />
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EvalPerso.cs" />
+    <Compile Include="Helpers\CustomHtmlHelpers.cs" />
+    <Compile Include="Models\EvalModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\PopularModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -286,6 +291,10 @@
     <Content Include="js\wow.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\zoneMembre\Views\web.config" />
+    <Content Include="Areas\zoneMembre\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\zoneMembre\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\zoneMembre\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -321,6 +330,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\zoneMembre\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

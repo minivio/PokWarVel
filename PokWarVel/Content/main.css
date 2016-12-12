@@ -206,6 +206,10 @@
 *******Header******
 **************************/
 
+img#logoPWL{
+    height: 150px;
+    margin: 30px;
+}
 
 #header{
   margin-bottom: 0;

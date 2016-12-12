@@ -23,15 +23,14 @@ namespace PokWarVel.Controllers
         public ActionResult FichePerso(long id)
         {
             Characters newHero = r.GetCharacterById(id);
-            EvalPerso newEval = new EvalPerso();
+            EvalModel newEval = new EvalModel();
             newEval.Hero = newHero;
             newEval.IdHero = id;
-            //ViewBag.idPerso = id;
             return View(newEval);
         }
 
         [HttpPost]
-        public ActionResult FichePerso(EvalPerso newEval, long id)
+        public ActionResult FichePerso(EvalModel newEval, long id)
         {
 
             newEval.IdHero = id;

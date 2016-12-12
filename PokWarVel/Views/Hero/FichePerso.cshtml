@@ -1,4 +1,5 @@
-﻿@model PokWarVel.Models.EvalPerso
+﻿@model PokWarVel.Models.EvalModel
+@using PokWarVel.Helpers
 
 @{
     ViewBag.Title = "Fiche Perso";
@@ -56,15 +57,17 @@
 
 <div>
     <h4>Derniers commentaires: </h4>
-    @foreach (string comment in Model.ListeCommentaires)
+    @Html.List(Model.ListeCommentaires)
+
+    @*@foreach (string comment in Model.ListeCommentaires)
     {
        @:<p> @comment</p>         
 
-    }
+    }*@
 </div>
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Back to List", "Index")*@
 </div>
 
 @section Scripts {

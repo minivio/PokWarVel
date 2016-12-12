@@ -12,13 +12,15 @@ namespace PokWarVel.Controllers
     public class HomeController : Controller
     {
         MarvelRequester r = new MarvelRequester();
+        EvalModel e = new EvalModel();
 
         public ActionResult Index()
         {
+            //HomeViewModel HVM = new HomeViewModel();
             
-            List<Characters> info = r.GetCharacters(limit: 100);
+            //return View(HVM);
+            return View(new HomeViewModel());
 
-            return View(info);
         }
 
         public ActionResult About()

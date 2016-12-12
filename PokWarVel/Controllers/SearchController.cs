@@ -27,42 +27,8 @@ namespace PokWarVel.Controllers
         {
             MarvelRequester r = new MarvelRequester();
             List<Characters> resultList = new List<Characters>();
-            resultList = r.SearchCharacters(limit: 100, offset: 0, SearchString: toLookFor);
-            //r.GetCharactersContainingString(toLookFor);
-            //bool moreResults = true;
-            //List<Characters> resultats = new List<Characters>();
-            //int newOffset = 0;
-
-            //do
-            //{
-            //    List<Characters> newListe = r.GetCharacters(limit: 100, offset: newOffset);
-
-            //    if (newListe != null)
-            //    {
-            //        foreach (Characters perso in newListe)
-            //        {
-            //            if (perso.name.ToLower().Contains(toLookFor.ToLower()))
-            //            {
-            //                resultats.Add(perso);
-            //            }
-            //        }
-            //        newOffset += 100;
-            //    }
-            //    else
-            //    {
-            //        moreResults = false;
-            //    }
-                
-            //} while (moreResults);
-
-       
-            
-            
-            // filtre
-            
-
+            resultList = (toLookFor != "")? r.SearchCharacters(limit: 100, offset: 0, SearchString: toLookFor) : r.GetCharacters(limit:100, offset: 0);
             ViewBag.Message = toLookFor;
-            //return View(laListe.Where(l => l.name.ToLower().Contains(toLookFor.ToLower())));
             return View(resultList);
         }
     }
